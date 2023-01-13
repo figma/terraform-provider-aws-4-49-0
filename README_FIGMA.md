@@ -23,5 +23,13 @@ cd terraform-provider-aws-4-49-0
   mv terraform-provider-aws/* .
   mv terraform-provider-aws/.* .
   rmdir terraform-provider-aws
+  git add . -A
+  git commit -nm 'Duplicate entire codebase from provider upstream'
+  git push -u origin main
+)
+
+(
+  git add . -A
+  git commit -nm 'Misc changes other than the codebase duplication'
 )
 ```
