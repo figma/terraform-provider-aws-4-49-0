@@ -5,6 +5,7 @@
 
 repo="terraform-provider-aws-4-49-0"
 version="4.49.0"
+git_tag="v$version"
 
 mkdir $repo
 cd $repo
@@ -40,6 +41,10 @@ cd $repo
 )
 
 (
+  # Make sure the repository is 'public', not 'internal' (Ask security for help)
+)
+
+(
   # Got to https://registry.terraform.io/
   # Log in via github credentials
   # Click 'Publish'
@@ -47,6 +52,19 @@ cd $repo
 )
 
 (
-  git tag v$version
+  # brew install gpgtools
+  # https://github.com/figma/terraform-provider-aws-4-49-0/settings/secrets/actions
+  # New repository secret
+  # GPG_PRIVATE_KEY
+)
+
+(
+  # https://github.com/figma/terraform-provider-aws-4-49-0/settings/actions
+  # Allow all actions and reusable workflows
+)
+
+(
+  git tag $git_tag
+  git push origin $git_tag
 )
 ```
