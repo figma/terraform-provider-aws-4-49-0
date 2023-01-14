@@ -36,11 +36,6 @@ cd $repo
 )
 
 (
-  git add . -A
-  git commit -nm 'Misc changes other than the codebase duplication'
-)
-
-(
   # Make sure the repository is 'public', not 'internal' (Ask security for help)
 )
 
@@ -52,11 +47,22 @@ cd $repo
 )
 
 (
-  # brew install gpgtools
+  # brew install gnupg
+  # gpg --full-generate-key
+  # defaults
+  # No password
+  # gpg --armor --export "{Key ID}"
+
   # https://github.com/figma/terraform-provider-aws-4-49-0/settings/secrets/actions
   # New repository secret
   # GPG_PRIVATE_KEY
 )
+
+(
+  curl https://raw.githubusercontent.com/hashicorp/terraform-provider-scaffolding/main/.goreleaser.yml > .goreleaser.yml
+  curl https://raw.githubusercontent.com/hashicorp/terraform-provider-scaffolding/main/.github/workflows/release.yml > .github/workflows/release.yml
+)
+
 
 (
   # https://github.com/figma/terraform-provider-aws-4-49-0/settings/actions
@@ -64,7 +70,14 @@ cd $repo
 )
 
 (
+  git add . -A
+  git commit -nm 'Misc changes other than the codebase duplication'
+  git tag -d $git_tag
   git tag $git_tag
   git push origin $git_tag --force
+)
+
+(
+  # https://github.com/figma/terraform-provider-aws-4-49-0/actions/workflows/release.yml
 )
 ```
