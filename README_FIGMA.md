@@ -71,7 +71,7 @@ cd $repo
 
 (
   git add . -A
-  git commit -nm 'Misc changes other than the codebase duplication'
+  git commit -nm "Misc changes other than the codebase duplication [$(date)]"
   git tag -d $git_tag
   git tag $git_tag
   git push origin main
