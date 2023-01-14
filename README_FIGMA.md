@@ -65,6 +65,6 @@ cd $repo
 
 (
   git tag $git_tag
-  git push origin $git_tag
+  git push origin $git_tag --force
 )
 ```
