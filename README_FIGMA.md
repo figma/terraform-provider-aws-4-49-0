@@ -74,6 +74,7 @@ cd $repo
   git commit -nm 'Misc changes other than the codebase duplication'
   git tag -d $git_tag
   git tag $git_tag
+  git push origin main
   git push origin $git_tag --force
 )
 
