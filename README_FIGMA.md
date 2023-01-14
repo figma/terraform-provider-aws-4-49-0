@@ -75,7 +75,7 @@ cd $repo
   git tag -d $git_tag
   git tag $git_tag
   git push origin main
-  git push $git_tag --force
+  git push origin $git_tag --force
 )
 
 (
