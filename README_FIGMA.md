@@ -59,8 +59,8 @@ cd $repo
 )
 
 (
-  curl https://raw.githubusercontent.com/figma/terraform-provider-aws/figma/.goreleaser.yml > .goreleaser.yml
-  curl https://raw.githubusercontent.com/figma/terraform-provider-aws/figma/.github/workflows/release.yml > .github/workflows/release.yml
+  curl https://raw.githubusercontent.com/hashicorp/terraform-provider-scaffolding/main/.goreleaser.yml > .goreleaser.yml
+  curl https://raw.githubusercontent.com/hashicorp/terraform-provider-scaffolding/main/.github/workflows/release.yml > .github/workflows/release.yml
 )
 
 
