@@ -61,6 +61,16 @@ cd $repo
 (
   curl https://raw.githubusercontent.com/figma/terraform-provider-aws/figma/.goreleaser.yml > .goreleaser.yml
   curl https://raw.githubusercontent.com/hashicorp/terraform-provider-scaffolding/main/.github/workflows/release.yml > .github/workflows/release.yml
+
+  Edit .github.workflows/release.yml to add `--timeout 120m to the goreleaser step
+```
+      -
+        name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@8f67e590f2d095516493f017008adc464e63adb1 # v4.1.0
+        with:
+          version: latest
+          args: release --rm-dist --timeout 120m
+```
 )
 
 
