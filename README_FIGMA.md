@@ -39,23 +39,10 @@ cd $repo
   # Make sure the repository is 'public', not 'internal' (Ask security for help)
 )
 
-(
-  # Got to https://registry.terraform.io/
-  # Log in via github credentials
-  # Click 'Publish'
-  # Click 'figma'
-)
 
 (
-  # brew install gnupg
-  # gpg --full-generate-key
-  # defaults
-  # No password
-  # gpg --armor --export "{Key ID}"
-
-  # https://github.com/figma/terraform-provider-aws-4-49-0/settings/secrets/actions
-  # New repository secret
-  # GPG_PRIVATE_KEY
+  # grab terrafom provider GPG_PRIVATE_KEY from `Eng - Prod` 1pass vault
+  # upload as github action environment variable
 )
 
 (
@@ -71,11 +58,9 @@ cd $repo
           version: latest
           args: release --rm-dist --timeout 120m
 ```
-)
-
 
 (
-  # https://github.com/figma/terraform-provider-aws-4-49-0/settings/actions
+  # https://github.com/figma/$repo/settings/actions
   # Allow all actions and reusable workflows
 )
 
@@ -93,6 +78,9 @@ cd $repo
 )
 
 (
-  # https://github.com/figma/terraform-provider-aws-4-49-0/actions/workflows/release.yml
+  # Got to https://registry.terraform.io/
+  # Log in via github credentials
+  # Click 'Publish'
+  # Click 'figma'
 )
 ```
